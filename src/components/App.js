@@ -12,7 +12,7 @@ const[mode, setMode]= useState(false)
   // this will be used for the Dark Mode Toggle feature
   const appClass = mode ? "App dark" : "App light"
 
-  function toggleTheme(e){
+  function toggleTheme(){
         setMode((mode) => !mode)
   }
 
