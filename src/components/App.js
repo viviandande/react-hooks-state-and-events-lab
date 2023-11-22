@@ -13,7 +13,7 @@ const[mode, setMode]= useState(false)
   const appClass = mode ? "App dark" : "App light"
 
   function toggleTheme(){
-        setMode((mode) => !mode)
+    setMode(!mode); //  setMode((mode) => !mode)
   }
 
   return (
