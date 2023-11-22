@@ -4,7 +4,7 @@ import ShoppingList from "./ShoppingList";
 import itemData from "../data/items";
 
 function App() {
-const[mode, setMode]= useState(true)
+const[mode, setMode]= useState(false)
 
 
 
@@ -13,14 +13,14 @@ const[mode, setMode]= useState(true)
   const appClass = mode ? "App dark" : "App light"
 
   function toggleTheme(e){
-        setMode(!mode)
+        setMode((mode) => !mode)
   }
 
   return (
     <div className={appClass}>
       <header>
         <h2>Shopster</h2>
-        <button onClick={toggleTheme}>{Boolean(mode)? 'Light Mode' : 'Dark Mode'}</button>
+        <button onClick={toggleTheme}>{Boolean(mode) ? 'Light Mode' : 'Dark Mode'}</button>
       </header>
       <ShoppingList items={itemData} />
     </div>
